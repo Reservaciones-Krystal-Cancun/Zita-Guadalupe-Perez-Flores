@@ -1,0 +1,95 @@
+//MX Palace Resorts
+
+if(!~window.location.href.indexOf('moonpalace')){
+
+!function(e,i){if(!e.pixie){var n=e.pixie=function(e,i,a){n.actionQueue.push({action:e,actionValue:i,params:a})};n.actionQueue=[];var a=i.createElement("script");a.async=!0,a.src="//acdn.adnxs.com/dmp/up/pixie.js";var t=i.getElementsByTagName("head")[0];t.insertBefore(a,t.firstChild)}}(window,document);
+pixie('init', '8ad14005-8484-422e-8e53-a284f2c600be');
+pixie('event', 'PageView');
+
+window.waitForConfirmCYB = function(){
+	if(!!~window.location.href.toLowerCase().indexOf("confirmation") && document.querySelector("iframe[src*='emjcd']")){
+		window.cybOrderData = {
+				order_id: document.querySelector("iframe[src*='emjcd']").src.match(/OID\=([0-9A-Z\-.]+)/)[1],
+				value: document.querySelector("iframe[src*='emjcd']").src.match(/AMOUNT\=([0-9.]+)/)[1]
+		};
+		pixie('event', 'Purchase'); 
+		createCybbaPixel("//secure.adnxs.com/px?id=1540561&order_id="+cybOrderData.order_id+"&value="+cybOrderData.value+"&other=[MXN]&t=2");	
+		window._vteq = window._vteq || [];
+		window._vteq.push({
+			confirmation: {
+				items: [],
+				orderId: window.cybOrderData.order_id,
+				total: window.cybOrderData.value
+			}
+		});
+	}else{
+        setTimeout(waitForConfirmCYB, 250);
+    }
+}
+waitForConfirmCYB()
+
+function createCybbaPixel(src){
+    var input = document.createElement('img');
+    input.setAttribute('src',src);
+    input.setAttribute('width', 0);
+    input.setAttribute('height', 0);
+    input.setAttribute('alt', "");
+    input.setAttribute('style', "display:none !important;");
+    document.body.appendChild(input); 
+}
+
+try{ var shopUrlCYB = '2334'
+    !function(){var t=function(t){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=t;var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)},e=Math.floor(5e4*Math.random());t("//d2rp1k1dldbai6.cloudfront.net/cybba_latest.min.js"),t("https://files1.cybba.solutions/"+shopUrlCYB+"/loader.min.js?v="+e),window._vteq=window._vteq||[],setTimeout(function(){window._vtsdk||t("https://storage.googleapis.com/cybcdn/"+shopUrlCYB+"/loader.js?v="+e)},1100),setTimeout(function(){"nestedVarDefined"in window&&!nestedVarDefined("_vtsdk.state.eventQueue")&&"_vtsdk"in window&&_vtsdk.init()},3e3)}();
+}catch(e){}
+
+	
+	
+	
+	
+}else if(!!~window.location.href.indexOf('moonpalace')){
+	
+	
+!function(e,i){if(!e.pixie){var n=e.pixie=function(e,i,a){n.actionQueue.push({action:e,actionValue:i,params:a})};n.actionQueue=[];var a=i.createElement("script");a.async=!0,a.src="//acdn.adnxs.com/dmp/up/pixie.js";var t=i.getElementsByTagName("head")[0];t.insertBefore(a,t.firstChild)}}(window,document);
+pixie('init', '27a93ec6-39f7-4b8f-a28b-07fd4ae991e7');
+pixie('event', 'PageView');
+
+window.waitForConfirmCYB = function(){
+	if(!!~window.location.href.toLowerCase().indexOf("confirmation") && document.querySelector("iframe[src*='emjcd']")){
+		window.cybOrderData = {
+				order_id: document.querySelector("iframe[src*='emjcd']").src.match(/OID\=([0-9A-Z\-.]+)/)[1],
+				value: document.querySelector("iframe[src*='emjcd']").src.match(/AMOUNT\=([0-9.]+)/)[1]
+		};
+		pixie('event', 'Purchase'); 
+		createCybbaPixel("//secure.adnxs.com/px?id=1541650&order_id="+cybOrderData.order_id+"&value="+cybOrderData.value+"&other=[MXN]&t=2");	
+		window._vteq = window._vteq || [];
+		window._vteq.push({
+			confirmation: {
+				items: [],
+				orderId: window.cybOrderData.order_id,
+				total: window.cybOrderData.value
+			}
+		});
+	}else{
+        setTimeout(waitForConfirmCYB, 250);
+    }
+}
+waitForConfirmCYB()
+
+function createCybbaPixel(src){
+    var input = document.createElement('img');
+    input.setAttribute('src',src);
+    input.setAttribute('width', 0);
+    input.setAttribute('height', 0);
+    input.setAttribute('alt', "");
+    input.setAttribute('style', "display:none !important;");
+    document.body.appendChild(input); 
+}
+
+try{
+    var shopUrlCYB = 'moonpalace.com'
+    !function(){var e=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=e;var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},t=~document.cookie.indexOf("cybbatest")?"files":"files1";e("https://"+t+".cybba.solutions/"+shopUrlCYB+"/loader.min.js"),e("//d2rp1k1dldbai6.cloudfront.net/cybba_latest.min.js"),window._vteq=window._vteq||[],setTimeout(function(){window._vtsdk||e("https://storage.googleapis.com/cybcdn/"+shopUrlCYB+"/loader.js?")},1100),setTimeout(function(){if("nestedVarDefined"in window&&!nestedVarDefined("_vtsdk.state.eventQueue")&&"_vtsdk"in window) _vtsdk.init();},1500)}()}catch(e){}
+	
+	
+
+	
+}	
